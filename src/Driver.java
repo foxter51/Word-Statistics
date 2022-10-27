@@ -18,7 +18,7 @@ public class Driver {
         System.out.println("Word Counts:");
 
         String[][] initWords = wordStatistics.countInitWords(wordsNumber);
-        for (int i = 0; i < initWords[0].length; i++) {
+        for (int i = 0; i < wordsNumber; i++) {
             System.out.println(initWords[i][0] + " " + initWords[i][1]);
         }
 
