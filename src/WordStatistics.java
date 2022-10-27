@@ -18,7 +18,7 @@ public class WordStatistics {
 
         for(String word : words){
             if(iterator == uniqueWordsCount) break;
-            if(!isContainsWord(word, initWords[0])){
+            if(!isContainsWord(word, initWords)){
                 int wordOccurrences = countWordOccurrences(word, words);
 
                 initWords[iterator][0] = word.toLowerCase();
@@ -52,12 +52,12 @@ public class WordStatistics {
     }
 
     public int textAge(){
-        return 2022 - Integer.parseInt(history.substring(10, 14));
+        return 2022 - Integer.parseInt(history.substring(10, 14)) + 1;
     }
 
-    private boolean isContainsWord(String word, String[] initWords){
-        for(String comparableWord : initWords){
-            if(word.equalsIgnoreCase(comparableWord)) return true;
+    private boolean isContainsWord(String word, String[][] initWords){
+        for (String[] initWord : initWords) {
+            if (word.equalsIgnoreCase(initWord[0])) return true;
         }
         return false;
     }
