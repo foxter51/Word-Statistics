@@ -1,8 +1,8 @@
 public class WordStatistics {
     private final String text;
     private final String history;
-    private static int totalWordCount;
-    private static int longestSentenceLength;
+    public static int totalWordCount;
+    public static int longestSentenceLength;
 
     public WordStatistics(String text, String history) {
         this.text = text.replaceAll("[\\!|\\?]", ".").replaceAll("\\,", "");
