@@ -46,7 +46,7 @@ public class WordStatistics {
         }
 
         System.out.println("The longest sentence:" +sentences[indexOfMax] + ".");
-        longestSentenceLength = maxSentenceLength;
+        longestSentenceLength = maxSentenceLength - 1;
 
         return maxSentenceLength;
     }
