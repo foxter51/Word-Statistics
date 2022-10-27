@@ -21,8 +21,10 @@ public class Driver {
         for (int i = 0; i < wordsNumber; i++) {
             System.out.println(initWords[i][0] + " " + initWords[i][1]);
         }
+        System.out.println("Total words count: " +wordStatistics.totalWordCount);
 
         wordStatistics.longestSentence();
+        System.out.println("Longest sentence length: " +wordStatistics.longestSentenceLength);
 
         System.out.println("Age of text: " +wordStatistics.textAge());
     }
